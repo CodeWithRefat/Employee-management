@@ -1,11 +1,11 @@
 import React from 'react'
 import { setLocalStorage } from '../../utils/localStorage'
 
-const Header = ({ data }) => {
+const Header = (props) => {
 
   const logOutUser = () =>{
     localStorage.setItem("loggedInUser", '')
-    window.location.reload()
+    props.changeUser('')
   }
 
   return (
