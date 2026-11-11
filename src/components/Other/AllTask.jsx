@@ -3,8 +3,8 @@ import { AuthContext } from '../../context/AuthProvider'
 
 const AllTask = () => {
 
-    const authData = useContext(AuthContext)
-    console.log(authData.employees)
+    const [userData, setUserData] = useContext(AuthContext)
+
 
     return (
         <div id='task' className='mt-4 mb-4 p-4 h- rounded bg-[#1C1C1C]'>
@@ -18,7 +18,7 @@ const AllTask = () => {
             </div>
 
             <div id='task' className=' '>
-                {authData.employees.map(function (elem, idx) {
+                {userData.map(function (elem, idx) {
                     return <div key={idx} className='border-1 font-medium text-lg border-gray-200-400 mb-2 flex justify-between rounded py-2 px-4'>
                         <h2 className='w-1/5'>{elem.firstName}</h2>
                         <h3 className='w-1/5 text-blue-500'>{elem.taskCounts.newTask}</h3>
