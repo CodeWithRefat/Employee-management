@@ -19,7 +19,7 @@ const AllTask = () => {
 
             <div id='task' className=' '>
                 {userData.map(function (elem, idx) {
-                    return <div key={idx} className='border-1 font-medium text-lg border-gray-200-400 mb-2 flex justify-between rounded py-2 px-4'>
+                    return <div key={idx} className='border-1 font-medium text-lg border-gray-200 mb-2 flex justify-between rounded py-2 px-4'>
                         <h2 className='w-1/5'>{elem.firstName}</h2>
                         <h3 className='w-1/5 text-blue-500'>{elem.taskCounts.newTask}</h3>
                         <h5 className='w-1/5 text-yellow-500'>{elem.taskCounts.active}</h5>
